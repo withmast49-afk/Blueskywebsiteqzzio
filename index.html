@@ -3,8 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Bluesky Hub</title>
-    <link rel="icon" type="image/png" href="assest/favicon.jpeg">
+
+    <link rel="icon" type="image/jpeg" href="assest/favicon.jpeg">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bluesky Hub">
+    <meta property="og:description" content="Welcome to my official workspace. A small unnecessary corner of the internet.">
+    <meta property="og:url" content="https://blueskywebsite.qzz.io/">
+    <meta property="og:image" content="https://blueskywebsite.qzz.io/assest/banner.jpg">
+    <meta property="og:image:alt" content="Bluesky Hub">
+    <meta property="og:site_name" content="Bluesky Hub">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bluesky Hub">
+    <meta name="twitter:description" content="Welcome to my official workspace.">
+    <meta name="twitter:image" content="https://blueskywebsite.qzz.io/assest/banner.jpg">
 
     <style>
         * {
@@ -23,18 +38,216 @@
             min-height: 100vh;
             background: #0b0f19;
             color: #f1f5f9;
-
             font-family:
                 -apple-system,
                 BlinkMacSystemFont,
                 "Segoe UI",
                 Roboto,
                 sans-serif;
-
             display: flex;
             justify-content: flex-start;
             align-items: center;
+            padding: 25px 15px;
+            position: relative;
+            overflow-x: hidden;
+        }
 
+        .bg-banner {
+            position: fixed;
+            inset: -20px;
+            width: calc(100% + 40px);
+            height: calc(100% + 40px);
+            background-image: url("assest/banner.jpg");
+            background-size: cover;
+            background-position: center;
+            filter: blur(15px) brightness(0.5);
+            z-index: -1;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 360px;
+            margin: 0 auto;
+        }
+
+        .profile-card {
+            width: 100%;
+            padding: 24px 18px;
+            text-align: center;
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .logo-img {
+            display: block;
+            width: 100%;
+            max-width: 180px;
+            height: auto;
+            margin: 0 auto 15px;
+            border-radius: 12px;
+        }
+
+        .bio {
+            color: #cbd5e1;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 100%;
+        }
+
+        .btn-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 12px;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition:
+                background 0.2s ease,
+                transform 0.2s ease,
+                border-color 0.2s ease;
+        }
+
+        .btn-link:hover {
+            background: rgba(255, 255, 255, 0.14);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .btn-link:active {
+            transform: scale(0.98);
+        }
+
+        .link-icon {
+            width: 22px !important;
+            height: 22px !important;
+            min-width: 22px !important;
+            max-width: 22px !important;
+            min-height: 22px !important;
+            max-height: 22px !important;
+            object-fit: contain;
+            flex: 0 0 22px;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.75rem;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 380px) {
+            body {
+                padding: 20px 10px;
+            }
+
+            .profile-card {
+                padding: 20px 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bg-banner"></div>
+
+    <main class="container">
+        <section class="profile-card">
+
+            <img
+                src="assest/banner.jpg"
+                alt="BlueSky Logo"
+                class="logo-img"
+            >
+
+            <p class="bio">
+                Welcome to my official workspace
+            </p>
+
+            <div class="links-container">
+
+                <a
+                    class="btn-link"
+                    href="https://www.tiktok.com/@3dpil?_r=1&_t=ZS-98tbLUpCAba"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img
+                        src="assest/tiktok.png"
+                        alt="TikTok"
+                        class="link-icon"
+                    >
+                    <span>TikTok</span>
+                </a>
+
+                <a
+                    class="btn-link"
+                    href="https://s.castle.xyz/_7FdWImr8HpF"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img
+                        src="assest/castle.png"
+                        alt="Castle"
+                        class="link-icon"
+                    >
+                    <span>Castle</span>
+                </a>
+
+                <a
+                    class="btn-link"
+                    href="https://www.roblox.com/users/5315204435/profile"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img
+                        src="assest/roblox.png"
+                        alt="Roblox"
+                        class="link-icon"
+                    >
+                    <span>Roblox</span>
+                </a>
+
+                <a
+                    class="btn-link"
+                    href="https://discord.gg/Rw4pCRGDvY"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img
+                        src="assest/discord.png"
+                        alt="Discord"
+                        class="link-icon"
+                    >
+                    <span>Discord</span>
+                </a>
+
+            </div>
+
+            <footer>
+                <p>&copy; 2026 blueskywebsite.qzz.io</p>
+            </footer>
+
+        </section>
+    </main>
+
+</body>
+</html>
             padding: 25px 15px;
 
             position: relative;
